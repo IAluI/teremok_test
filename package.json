@@ -1,0 +1,48 @@
+{
+  "name": "teremok_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp",
+    "prod": "set NODE_ENV=production && gulp build",
+    "clearCache": "gulp clearCache",
+    "clean": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAluI/teremok_test.git"
+  },
+  "author": "Ilya Molostov",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/IAluI/teremok_test/issues"
+  },
+  "homepage": "https://github.com/IAluI/teremok_test#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@bdchauvette/gulp-prettier": "^2.0.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulplog": "^1.0.0",
+    "node-notifier": "^6.0.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.6"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "jquery": "^3.4.1",
+    "swiper": "^5.3.1"
+  }
+}

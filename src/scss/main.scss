@@ -1,0 +1,21 @@
+/*
+  Библиотеки
+*/
+@import "./node_modules/swiper/swiper";
+@import "./node_modules/swiper/components/pagination/pagination";
+@import "./node_modules/swiper/components/navigation/navigation";
+@import "./node_modules/swiper/components/effect-fade/effect-fade";
+/*
+  Векторные спрайты
+*/
+@import "./tmp/icons";
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__main {
+    flex: 1 0 auto;
+    font-family: 'Roboto Slab', serif;
+  }
+}
