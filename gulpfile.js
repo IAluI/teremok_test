@@ -39,14 +39,19 @@ const paths = {
     watch: "./src/scss/*.scss"
   },
   images: {
-    src: "./src/img/*.{jpg,jpeg,png,gif,svg,ico}",
+    src: ["./src/img/*.{jpg,jpeg,png,gif,svg,ico}", "./tmp/img/*.svg"],
     dist: "../IAluI.github.io/img/",
     watch: "./src/img/*.{jpg,jpeg,png,gif,svg,ico}"
   },
+  video: {
+    src: "./src/video/*.mp4",
+    dist: "../IAluI.github.io/video/",
+    watch: "./src/video/*.mp4"
+  },
   svgSprite: {
-    src: "./src/icons_v/*.svg",
-    dist: "../IAluI.github.io/img/",
-    watch: ["./src/icons_v/*.svg", "./src/icons_v/scssSpriteTemplate.mustache"]
+    src: "./src/icons_v/**/*.svg",
+    dist: "./tmp/",
+    watch: ["./src/icons_v/**/*.svg", "./src/icons_v/scssSpriteTemplate.mustache"]
   }
 };
 
@@ -101,6 +106,12 @@ gulp.task('fonts', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('video', () => {
+  return gulp.src(paths.video.src)
+    .pipe(gulp.dest(paths.video.dist))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('images', () => {
   return gulp.src(paths.images.src)
     .pipe(imagemin([
@@ -113,7 +124,7 @@ gulp.task('images', () => {
       }),
       imagemin.svgo({
         plugins: [
-          {removeViewBox: false},
+          {removeViewBox: true},
           {cleanupIDs: false}
         ]
       }),
@@ -128,21 +139,35 @@ gulp.task('images', () => {
 
 gulp.task('svgSprite', () => {
   return gulp.src(paths.svgSprite.src)
+    .pipe(rename((path) => {
+      if (path.dirname !== '.') {
+        path.basename = path.dirname.replace('\\', '-') + '-' + path.basename;
+        path.dirname = '.';
+      }
+    }))
     .pipe(svgSprite({
+      shape: {
+        spacing: {
+          padding: 2
+        }
+      },
       mode: {
-        symbol: {
+        css: {
           dest: '.',
-          sprite: 'icons.svg',
+          sprite: 'img/icons.svg',
           render: {
             scss: {
               dest: '_icons.scss',
               template: 'src/icons_v/scssSpriteTemplate.mustache'
             }
           },
+          /*mixin: 'getSvg',
+          dimensions: true,*/
           example: isDevelopment,
         }
       }
     }))
+    //.pipe(rename((path) => {console.log(path)}))
     .pipe(gulp.dest(paths.svgSprite.dist))
     .pipe(browserSync.stream());
 });
@@ -233,8 +258,9 @@ gulp.task('webserver', () => {
   gulp.watch(paths.pug.watch, gulp.series('pug', 'reload'));
   gulp.watch(paths.styles.watch, gulp.series('styles'));
   gulp.watch(paths.images.watch, gulp.series('images'));
-  gulp.watch(paths.svgSprite.watch, gulp.series('svgSprite', 'styles'));
+  gulp.watch(paths.svgSprite.watch, gulp.series('svgSprite', gulp.parallel('images', 'styles')));
   gulp.watch(paths.fonts.watch, gulp.series('fonts'));
+  gulp.watch(paths.video.watch, gulp.series('video'));
 });
 
 gulp.task('build',
@@ -243,6 +269,7 @@ gulp.task('build',
     'svgSprite',
     gulp.parallel(
       'fonts',
+      'video',
       'images',
       'styles',
       'webpack',

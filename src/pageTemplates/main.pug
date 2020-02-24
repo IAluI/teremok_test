@@ -2,6 +2,22 @@ mixin icon(name, color)
   svg(class = `icon icon-${name}${color ? ' icon-' + color: ''}`)&attributes(attributes)
     use(xlink:href = `/img/icons.svg#${name}`)
 
+mixin customSelect(name, ...options)
+  div(class = attributes.class, tabindex=0).custom-select
+    select(name = name, tabindex=-1)
+      each item, index in options
+        if (index === 0)
+          option(value = index, selected)= item
+        else
+          option(value = index)= item
+    div.custom-select__selected= options[0]
+    ul.custom-select__options
+      each item, index in options
+        if (index === 0)
+          li.custom-select__option.custom-select__option--selected= item
+        else
+          li.custom-select__option= item
+
 block variables
 
 doctype html
@@ -15,10 +31,124 @@ html(lang='ru')
     title= title
   body
     div.page
-      header
-
+      header.header
+        div.header__bg
+        div.header__content
+          div.header__content-block
+            a(href="/").header__logo
+          nav.header__content-nav
+            ul.header__nav-list
+              li.header__nav-item.header__nav-item--forum
+                a(href="")
+                  span Ваше мнение
+              li.header__nav-item.header__nav-item--food
+                //.header__food-menu
+                a(href="")
+                  //.header__food-menu-link
+                  span Наше меню
+              li.header__nav-item.header__nav-item--desctop
+                a(href="")
+                  span Акции
+              li.header__nav-item.header__nav-item--desctop
+                a(href="")
+                  span Наши теремки
+          div.header__content-block
+            div.header__location
+              span Москва
+            div.header__menu
+              div
       main.page__main
         block content
-      footer
-    
+      footer.footer
+        div.footer__top
+          div.footer__wrapper.footer__top-wrapper
+            div.footer__logo
+              a(href="/")
+            nav.footer__nav
+              ul.footer__nav-list.footer__nav-list--first
+                li
+                  a(href="").link О Теремке
+                li
+                  a(href="").link Меню
+                li
+                  a(href="").link Калькулятор калорий
+                li
+                  a(href="").link Акции
+                li
+                  a(href="").link Наши заведения
+              ul.footer__nav-list.footer__nav-list--second
+                li
+                  a(href="").link Контакты
+                li
+                  a(href="").link Ваше мнение
+                li
+                  a(href="").link События
+                li
+                  a(href="").link Работа у нас
+              ul.footer__nav-list.footer__nav-list--third
+                li
+                  a(href="").link Предложить помещение
+                li
+                  a(href="").link Предложить продукцию
+                li
+                  a(href="").link Прессе
+                li
+                  a(href="").link Партнерство
+                li
+                  a(href="").link Связаться с руководством
+
+
+
+
+
+
+
+
+
+
+            div.page__d-desctop.footer__contacts
+              div.footer__contacts-mail
+                a(href="mailto:office@teremok.ru")
+                  | office@teremok.ru
+              div.footer__contacts-adress
+                span
+                  | 119021, Москва, Зубовский
+                  br
+                  | бульвар, д. 22/39
+              div.footer__contacts-tel
+                a(href="tel:\+7 (495) 956-27-30")
+                  | +7 (495) 956-27-30 
+              div.footer__contacts-tel
+                a(href="tel:\+7 (495) 736-93-94")
+                  | +7 (495) 736-93-94
+            div.page__d-mobile.footer__contacts
+              div.footer__contacts-label
+                | Центральный офис в Москве
+              div.footer__contacts-tel
+                a(href="tel:\+7 (495) 956-27-30")
+                  | +7 (495) 956-27-30 
+            +customSelect('city', 'Москва', 'Барнаул', 'Другой город').page__d-mobile.footer__city-select
+            div.page__d-mobile.footer__copyright
+              | @ Теремок, 2017
+        div.footer__bottom
+          div.footer__wrapper.footer__bottom-wrapper
+            div.page__d-desctop.footer__copyright
+              | @ Теремок, 2017
+            ul.footer__social
+              li.footer__social-item
+                a(herf="").footer__social-inst
+              li.footer__social-item
+                a(herf="").footer__social-vk
+              li.footer__social-item
+                a(herf="").footer__social-face
+              li.footer__social-item
+                a(herf="").footer__social-twit
+            div.page__d-desctop.footer__developer
+              | Разработка сайта -
+              a(target="_blank", href="https://adn.agency")
+                | ADN Digital Studio
+
+
+
+
     script(type='text/javascript', src='/js/main.js')

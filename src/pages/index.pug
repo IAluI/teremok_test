@@ -1,8 +1,23 @@
 extends ../pageTemplates/main.pug
 
 block variables
-  - var title = '';
+  - var title = 'Теремок';
   - var faviconUrl = '';
 
 block content
-  h1 Hello world!
+  section.sec-first
+    video(preload="auto", autoplay="autoplay", muted="muted", loop="loop").sec-first__video
+      source(src="/video/teremok_final.mp4", type="video/mp4")
+    div.sec-first__content
+      div.sec-first__title
+        h1
+          | «Теремок»
+        p
+          span это
+        p
+          | не фастфуд!
+      p.sec-first__text
+        | Мы придерживаемся современного улучшенного подхода  к быстрому питанию, в котором отменный вкус сочетается  с
+        | высокой скоростью обслуживания
+      div.sec-first__scroll-down
+

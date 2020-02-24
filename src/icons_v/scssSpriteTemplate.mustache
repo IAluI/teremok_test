@@ -1,20 +1,17 @@
-.icon {
-  display: inline-block;
-  font-size: 1.25rem;
-  height: 1em;
-  fill: currentColor;
-}
+$sprites: (
+  {{#shapes}}
+    "{{name}}": (
+      position: {{position.relative.xy}},
+      width: {{width.outer}}px,
+      height: {{height.outer}}px
+    ){{^last}},{{/last}}
+  {{/shapes}}
+);
 
-.icon-black {
-  fill: #000;
+@mixin getSvg ($svgName) {
+  background: url("/{{{sprite}}}") no-repeat;
+  $prop: map-get($sprites, $svgName);
+  background-position: map-get($prop, "position");
+  width: map-get($prop, "width");
+  height: map-get($prop, "height");
 }
-
-.icon-white {
-  fill: #fff;
-}
-
-{{#shapes}}
-.icon-{{base}} {
-  width:({{width.inner}}/{{height.inner}})*1em;
-}
-{{/shapes}}

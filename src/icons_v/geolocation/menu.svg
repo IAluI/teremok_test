@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="15px" viewBox="0 0 10 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/geolocation/menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/geolocation/menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.82364265,6.321 L9.6863532,6.67952261 L9.58454063,6.99866211 C9.39889961,7.42388943 9.1558313,7.81829998 8.86513683,8.17209262 L5,14.4765762 L1.13486317,8.17209262 C0.844168705,7.81829998 0.601100389,7.42388943 0.415459376,6.99866212 L0.337406909,6.67952261 L0.176357352,6.321 L0.176357352,3.679 C0.755712625,1.55858287 2.69584305,0 5,0 C7.30415695,0 9.24428737,1.55858287 9.82364265,3.679 L9.82364265,6.321 Z M5.04999995,7 C6.01649826,7 6.79999995,6.21649831 6.79999995,5.25 C6.79999995,4.28350169 6.01649826,3.5 5.04999995,3.5 C4.08350164,3.5 3.29999995,4.28350169 3.29999995,5.25 C3.29999995,6.21649831 4.08350164,7 5.04999995,7 Z" id="Combined-Shape" fill="#C3151C" fill-rule="nonzero"></path>
+    </g>
+</svg>
