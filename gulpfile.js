@@ -207,9 +207,9 @@ gulp.task('webpack', function(callback) {
                 return new RegExp('node_modules\\\\' + val).test(modulePath);
               });
           },
-          use: [/* {
+          use: [ {
             loader: 'echo-loader'
-          },  */{
+          },  {
             loader: 'babel-loader'
           }]
         }
@@ -218,9 +218,8 @@ gulp.task('webpack', function(callback) {
     plugins: [
       new webpack.ProvidePlugin({
         $: 'jquery',
-        /* jQuery: 'jquery',
-        'window.jQuery': 'jquery', */
-        /*Popper: ['popper.js', 'default']*/
+         jQuery: 'jquery',
+        'window.jQuery': 'jquery',
       })
     ]
   };
