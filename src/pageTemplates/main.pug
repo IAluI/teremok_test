@@ -55,6 +55,10 @@ html(lang='ru')
           div.header__content-block
             div.header__location
               span Москва
+              div.header__location-dropdown
+                a(href="") Москва
+                a(href="") Санкт-Петербург
+                a(href="") Другой город
             div.header__menu
               div
       main.page__main
@@ -116,18 +120,18 @@ html(lang='ru')
                   br
                   | бульвар, д. 22/39
               div.footer__contacts-tel
-                a(href="tel:\+7 (495) 956-27-30")
+                a(href="tel:+74959562730")
                   | +7 (495) 956-27-30 
               div.footer__contacts-tel
-                a(href="tel:\+7 (495) 736-93-94")
+                a(href="tel:+74957369394")
                   | +7 (495) 736-93-94
             div.page__d-mobile.footer__contacts
               div.footer__contacts-label
                 | Центральный офис в Москве
               div.footer__contacts-tel
-                a(href="tel:\+7 (495) 956-27-30")
+                a(href="tel:+74959562730")
                   | +7 (495) 956-27-30 
-            +customSelect('city', 'Москва', 'Барнаул', 'Другой город').page__d-mobile.footer__city-select
+            +customSelect('city', 'Москва', 'Санкт-Петербург', 'Другой город').page__d-mobile.footer__city-select
             div.page__d-mobile.footer__copyright
               | @ Теремок, 2017
         div.footer__bottom
@@ -136,13 +140,13 @@ html(lang='ru')
               | @ Теремок, 2017
             ul.footer__social
               li.footer__social-item
-                a(herf="").footer__social-inst
+                a(href="").footer__social-inst
               li.footer__social-item
-                a(herf="").footer__social-vk
+                a(href="").footer__social-vk
               li.footer__social-item
-                a(herf="").footer__social-face
+                a(href="").footer__social-face
               li.footer__social-item
-                a(herf="").footer__social-twit
+                a(href="").footer__social-twit
             div.page__d-desctop.footer__developer
               | Разработка сайта -
               a(target="_blank", href="https://adn.agency")

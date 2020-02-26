@@ -1,0 +1,12 @@
+<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 13.5C11.5 12.1 14.5 11.5 18.1 11.5C21.7 11.5 24.6 12.6 24.6 14V17C24.6 18.4 21.7 19.5 18.1 19.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.1001 12.2999C10.2001 12.0999 8.8001 11.4999 8.1001 10.7999" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.6 14C24.6 15.4 21.7 16.5 18.1 16.5C17.4 16.5 16.7 16.5 16 16.4" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 4.6C13 4.6 13.5 4.5 14 4.5C17.6 4.5 20.6 5.6 20.6 7V10C20.6 10.5 20.2 11 19.5 11.4" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5999 7C20.5999 8.4 17.6999 9.5 14.0999 9.5C13.4999 9.5 12.9999 9.5 12.3999 9.4" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.2001 3.59996C13.1001 4.49996 11.9001 7.09996 9.50008 9.49996C7.10008 11.9 4.50008 13.1 3.60008 12.2L1.60008 10.2C0.700084 9.29996 1.90008 6.69996 4.30008 4.29996C6.70008 1.89996 9.30008 0.699962 10.2001 1.59996L12.2001 3.59996Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.8002 4.69995C9.3002 5.59995 8.5002 6.59995 7.6002 7.49995C6.6002 8.49995 5.6002 9.19995 4.7002 9.69995" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 19.5H11.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.5 19.4999V19.4999C11.5 20.5999 10.6 21.4999 9.5 21.4999H8.5C7.9 21.4999 7.5 21.8999 7.5 22.4999V22.4999C7.5 23.0999 7.9 23.4999 8.5 23.4999H16.5C17 23.4999 17.5 23.0999 17.5 22.4999V22.4999C17.5 21.8999 17 21.4999 16.5 21.4999V21.4999C16 21.4999 15.6 21.0999 15.6 20.5999V19.4999H17.6C19.3 19.4999 20.6 18.0999 20.6 16.4999V16.4999C20.6 15.8999 20.3 15.2999 19.8 14.8999L16.1 11.8999" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.5 13.5V15.5H6.5C5.4 15.5 4.5 16.4 4.5 17.5V17.5C4.5 18.6 5.4 19.5 6.5 19.5V19.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
